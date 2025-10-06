@@ -42,7 +42,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-            La volatilidad de precios, el riesgo de desabastecimiento y las presiones regulatorias 
+            El aumento de precios de importación, el riesgo de desabastecimiento y las presiones regulatorias 
             amenazan la continuidad de tu negocio. <strong>BioMet</strong> te ayuda a alcanzar la 
             independencia energética con biometano.
           </p>
