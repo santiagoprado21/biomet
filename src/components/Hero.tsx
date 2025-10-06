@@ -37,7 +37,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             ¿Dependes del Gas Fósil?
             <span className="block mt-2 text-secondary-foreground">
-              es hora de al transicion
+              es hora de la transición
             </span>
           </h1>
           
