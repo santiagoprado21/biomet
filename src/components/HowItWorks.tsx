@@ -1,34 +1,34 @@
 import { Card } from "@/components/ui/card";
-import { FileSearch, Users, Settings, Rocket } from "lucide-react";
+import { Search, Target, ClipboardList, Lightbulb } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: FileSearch,
+      icon: Search,
       number: "01",
-      title: "Evaluación Inicial",
-      description: "Analizamos tu situación actual, consumo energético y necesidades específicas para diseñar la solución perfecta.",
+      title: "Análisis de entorno",
+      description: "Evaluamos la situación actual del cliente, analizando la infraestructura existente, capacidad técnica y condiciones de mercado energético local",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: Users,
+      icon: Target,
       number: "02",
-      title: "Conexión con Productores",
-      description: "Te conectamos con productores confiables de biomasa y facilitamos las alianzas estratégicas necesarias.",
+      title: "Objetivos",
+      description: "Definir junto al cliente las metas del proyecto (volumen de biometano a producir, impacto ambiental, análisis de regulaciones gubernamentales).",
       color: "from-cyan-500 to-teal-500",
     },
     {
-      icon: Settings,
+      icon: ClipboardList,
       number: "03",
-      title: "Implementación Técnica",
-      description: "Acompañamiento en la instalación, capacitación de personal y cumplimiento de todos los requisitos regulatorios.",
+      title: "Plan de acción",
+      description: "Cronograma de ejecución, roles, indicadores de desempeño, seguimiento a los índices de satisfacción del cliente por el servicio brindado.",
       color: "from-teal-500 to-green-500",
     },
     {
-      icon: Rocket,
+      icon: Lightbulb,
       number: "04",
-      title: "Operación y Soporte",
-      description: "Soporte continuo para optimizar tu producción de biometano y garantizar el máximo retorno de inversión.",
+      title: "Recomendaciones",
+      description: "Elaboración del proceso de producción, rutas de comercialización y estrategias para acceder a beneficios y certificaciones brindados por el estado",
       color: "from-green-500 to-emerald-500",
     },
   ];
@@ -41,13 +41,13 @@ const HowItWorks = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold">Proceso Simple</span>
+            <span className="text-primary font-semibold">Nuestra Metodología</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             ¿Cómo Funciona?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Un proceso transparente y estructurado para llevar tu transición energética al éxito
+            Un proceso estructurado y profesional que garantiza el éxito de tu proyecto de biometano
           </p>
         </div>
 
@@ -94,16 +94,27 @@ const HowItWorks = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <p className="text-lg text-muted-foreground mb-4">
-            ¿Listo para comenzar tu transición energética?
-          </p>
-          <button 
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-semibold"
-          >
-            Agenda una Consulta Gratuita
-          </button>
+        <div className="mt-16 max-w-4xl mx-auto">
+          <Card className="p-8 bg-gradient-hero text-white shadow-strong relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+            
+            <div className="relative z-10 text-center">
+              <h3 className="text-3xl font-bold mb-4">
+                ¿Listo para Implementar esta Metodología?
+              </h3>
+              <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+                Nuestro equipo está preparado para guiarte en cada paso del proceso hacia la independencia energética
+              </p>
+              <button
+                onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                className="inline-flex items-center px-8 py-3 bg-white text-primary rounded-lg hover:bg-white/90 transition-colors font-semibold shadow-lg"
+              >
+                Solicitar Asesoría Gratuita
+              </button>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
