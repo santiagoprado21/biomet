@@ -5,6 +5,7 @@ import ROICalculator from "@/components/ROICalculator";
 import ValueProposition from "@/components/ValueProposition";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
+import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
@@ -22,6 +23,7 @@ const Index = () => {
         <ValueProposition />
         <HowItWorks />
         <Features />
+        <Team />
         <Testimonials />
         <FAQ />
         <ContactForm />

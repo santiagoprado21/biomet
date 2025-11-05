@@ -39,7 +39,7 @@ const Stats = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Resultados que Hablan por Sí Mismos
+            Resultados que hablan por sí mismos
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Impacto real medido en nuestros proyectos de biometano
