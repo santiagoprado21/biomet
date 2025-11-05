@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# 🌱 BioMet - Plataforma de Consultoría en Biometano
 
-## Project info
+![BioMet Banner](./src/assets/hero-biomet.jpg)
 
-**URL**: https://lovable.dev/projects/d88decb3-2c69-4648-8624-2ccb3441d80f
+## 📋 Descripción del Proyecto
 
-## How can I edit this code?
+BioMet es una plataforma web desarrollada como proyecto universitario para la **Universidad ICESI** (Facultad de Ingeniería, Diseño y Ciencias Aplicadas). 
 
-There are several ways of editing your application.
+Nuestro objetivo es proporcionar consultoría integral en biometano, ayudando a distribuidores de GNV, gas natural y usuarios domésticos a realizar una transición energética sostenible.
 
-**Use Lovable**
+## 🎯 Propuesta de Valor
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d88decb3-2c69-4648-8624-2ccb3441d80f) and start prompting.
+- **Independencia Energética**: Reducción de dependencia del gas fósil importado
+- **Estabilidad de Precios**: Protección contra la volatilidad del mercado internacional
+- **Cumplimiento Regulatorio**: Adelanto a las presiones gubernamentales
+- **Impacto Ambiental Positivo**: Contribución a la economía circular
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Tecnologías Utilizadas
 
-**Use your preferred IDE**
+Este proyecto está construido con tecnologías modernas:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- ⚡ **Vite** - Build tool ultrarrápido
+- ⚛️ **React 18** - Biblioteca de UI
+- 📘 **TypeScript** - Tipado estático
+- 🎨 **Tailwind CSS** - Framework de estilos
+- 🧩 **shadcn/ui** - Componentes UI accesibles
+- 📊 **React Query** - Manejo de estado del servidor
+- 🎭 **Lucide Icons** - Iconos modernos
+- 📋 **React Hook Form + Zod** - Formularios y validación
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 💻 Instalación y Desarrollo
 
-Follow these steps:
+### Requisitos Previos
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js (versión 18 o superior)
+- npm o pnpm
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Pasos para Ejecutar Localmente
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# 1. Clonar el repositorio
+git clone <URL_DEL_REPOSITORIO>
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 2. Navegar al directorio del proyecto
+cd biomet
+
+# 3. Instalar dependencias
+npm install
+
+# 4. Iniciar servidor de desarrollo
 npm run dev
+
+# 5. Abrir en el navegador
+# http://localhost:5173
 ```
 
-**Edit a file directly in GitHub**
+### Scripts Disponibles
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev      # Inicia el servidor de desarrollo
+npm run build    # Construye para producción
+npm run preview  # Vista previa de la build de producción
+npm run lint     # Ejecuta el linter
+```
 
-**Use GitHub Codespaces**
+## 📂 Estructura del Proyecto
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+biomet/
+├── src/
+│   ├── assets/          # Imágenes y recursos estáticos
+│   ├── components/      # Componentes React
+│   │   ├── ui/         # Componentes de UI reutilizables
+│   │   ├── Hero.tsx
+│   │   ├── Features.tsx
+│   │   ├── ValueProposition.tsx
+│   │   ├── ContactForm.tsx
+│   │   └── Footer.tsx
+│   ├── hooks/          # Custom hooks
+│   ├── lib/            # Utilidades y helpers
+│   ├── pages/          # Páginas de la aplicación
+│   └── main.tsx        # Punto de entrada
+├── public/             # Archivos públicos
+└── package.json
+```
 
-## What technologies are used for this project?
+## 🌟 Características Principales
 
-This project is built with:
+- ✅ Diseño responsive y moderno
+- ✅ Animaciones suaves y profesionales
+- ✅ Formulario de contacto con validación
+- ✅ Sección de características y servicios
+- ✅ Propuesta de valor clara
+- ✅ Optimizado para rendimiento
+- ✅ Accesibilidad (WCAG)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎓 Proyecto Universitario
 
-## How can I deploy this project?
+**Universidad**: ICESI  
+**Facultad**: Ingeniería, Diseño y Ciencias Aplicadas  
+**Ubicación**: Cali, Valle del Cauca, Colombia
 
-Simply open [Lovable](https://lovable.dev/projects/d88decb3-2c69-4648-8624-2ccb3441d80f) and click on Share -> Publish.
+## 📞 Contacto
 
-## Can I connect a custom domain to my Lovable project?
+- **Email**: contacto@biomet.com
+- **Teléfono**: +57 300 123 4567
+- **Ubicación**: Cali, Valle del Cauca, Colombia
 
-Yes, you can!
+## 📄 Licencia
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Este proyecto es de uso académico para la Universidad ICESI.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+**Desarrollado con 💚 para un futuro más sostenible**

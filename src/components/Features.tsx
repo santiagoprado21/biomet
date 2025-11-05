@@ -36,9 +36,16 @@ const Features = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="servicios" className="py-20 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
+          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+            <span className="text-primary font-semibold">Nuestros Servicios</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Características de Nuestro Servicio
           </h2>
@@ -53,17 +60,22 @@ const Features = () => {
             return (
               <Card 
                 key={index}
-                className="p-6 bg-card hover:bg-gradient-card border-border hover:border-primary/20 shadow-md hover:shadow-elegant transition-all duration-300 group"
+                className="relative p-6 bg-card hover:bg-gradient-card border-border hover:border-primary/20 shadow-md hover:shadow-elegant transition-all duration-300 group overflow-hidden hover:-translate-y-2"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-7 h-7 text-primary" />
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
               </Card>
             );
           })}

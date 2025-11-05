@@ -75,9 +75,16 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contacto" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
+    <section id="contacto" className="py-20 bg-gradient-subtle relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
+          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+            <span className="text-primary font-semibold">Contáctanos</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             ¿Listo para la Transición Energética?
           </h2>
@@ -89,14 +96,15 @@ const ContactForm = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div>
-            <Card className="p-8 bg-gradient-card border-none shadow-elegant mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+            <Card className="p-8 bg-white border-none shadow-elegant mb-8 hover:shadow-strong transition-shadow">
+              <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                <div className="w-1 h-8 bg-primary rounded-full" />
                 Información de Contacto
               </h3>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary/5 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">Email</p>
@@ -105,9 +113,9 @@ const ContactForm = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary/5 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">Teléfono</p>
@@ -116,9 +124,9 @@ const ContactForm = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary/5 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">Ubicación</p>
@@ -131,33 +139,43 @@ const ContactForm = () => {
               </div>
             </Card>
 
-            <div className="bg-gradient-hero rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">
-                ¿Por qué elegirnos?
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">✓</span>
-                  <span>Experiencia en energías renovables</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">✓</span>
-                  <span>Soluciones personalizadas</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">✓</span>
-                  <span>Acompañamiento integral</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">✓</span>
-                  <span>Compromiso con la sostenibilidad</span>
-                </li>
-              </ul>
+            <div className="bg-gradient-hero rounded-2xl p-8 text-white shadow-strong relative overflow-hidden">
+              {/* Animated background */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4">
+                  ¿Por qué elegirnos?
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    <span className="text-2xl text-green-300">✓</span>
+                    <span>Experiencia en energías renovables</span>
+                  </li>
+                  <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    <span className="text-2xl text-green-300">✓</span>
+                    <span>Soluciones personalizadas</span>
+                  </li>
+                  <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    <span className="text-2xl text-green-300">✓</span>
+                    <span>Acompañamiento integral</span>
+                  </li>
+                  <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    <span className="text-2xl text-green-300">✓</span>
+                    <span>Compromiso con la sostenibilidad</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <Card className="p-8 bg-card border-border shadow-elegant">
+          <Card className="p-8 bg-white border-none shadow-elegant hover:shadow-strong transition-shadow">
+            <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+              <div className="w-1 h-8 bg-primary rounded-full" />
+              Envíanos un Mensaje
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="nombre">Nombre Completo *</Label>

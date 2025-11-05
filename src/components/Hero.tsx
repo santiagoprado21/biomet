@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Leaf, Zap } from "lucide-react";
+import { ArrowRight, Leaf, Zap, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-biomet.jpg";
 
 const Hero = () => {
@@ -8,46 +8,52 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden -mt-20">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-hero opacity-90 z-10" />
         <img 
           src={heroImage} 
           alt="Energía limpia y sostenible con biometano" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-subtle-zoom"
         />
       </div>
 
-      {/* Floating elements */}
-      <div className="absolute top-20 right-20 animate-pulse">
+      {/* Animated floating elements */}
+      <div className="absolute top-20 right-20 animate-float">
         <Leaf className="w-16 h-16 text-white/20" />
       </div>
-      <div className="absolute bottom-32 left-20 animate-pulse delay-300">
+      <div className="absolute bottom-32 left-20 animate-float-delayed">
         <Zap className="w-12 h-12 text-white/20" />
+      </div>
+      <div className="absolute top-1/3 left-1/4 animate-pulse">
+        <Sparkles className="w-8 h-8 text-white/15" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-20">
-        <div className="max-w-4xl">
-          <div className="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <span className="text-white font-medium">🌱 Energía Renovable del Futuro</span>
+        <div className="max-w-4xl animate-fade-in-up">
+          <div className="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 animate-fade-in">
+            <span className="text-white font-medium flex items-center gap-2">
+              <Leaf className="w-4 h-4" />
+              Energía Renovable del Futuro
+            </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
             ¿Dependes del Gas Fósil?
-            <span className="block mt-2 text-secondary-foreground">
+            <span className="block mt-2 text-secondary-foreground bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
               es hora de la transición
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-400">
             El aumento de precios de importación, el riesgo de desabastecimiento y las presiones regulatorias 
-            amenazan la continuidad de tu negocio. <strong>BioMet</strong> te ayuda a alcanzar la 
+            amenazan la continuidad de tu negocio. <strong className="text-green-300">BioMet</strong> te ayuda a alcanzar la 
             independencia energética con biometano.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up animation-delay-600">
             <Button 
               variant="hero" 
               size="xl"
@@ -68,17 +74,17 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-1">100%</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl animate-fade-in-up animation-delay-800">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="text-3xl font-bold text-white mb-1 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">100%</div>
               <div className="text-white/80 text-sm">Energía Renovable</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-1">-40%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="text-3xl font-bold text-white mb-1 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">-40%</div>
               <div className="text-white/80 text-sm">Reducción Costos</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-1">0</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="text-3xl font-bold text-white mb-1 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">0</div>
               <div className="text-white/80 text-sm">Emisiones Netas</div>
             </div>
           </div>
